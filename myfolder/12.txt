@@ -1,0 +1,498 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Codeprogmon
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            int a = Convert.ToInt32(Console.ReadLine());
+            int b = Convert.ToInt32(Console.ReadLine());
+            int c = Convert.ToInt32(Console.ReadLine());
+            
+            if (a > 0 && b > 0 && c > 0)
+            {
+
+                if (a < b && b < c)
+                {
+
+                    if ((c * c) == (b * b + a * a))
+                    {
+                        Console.WriteLine("yes");
+                      
+                    
+                    }
+                    else
+                        Console.WriteLine("no");
+                    
+                }
+
+                else
+                    Console.WriteLine("no");
+            }
+            else
+                Console.WriteLine("no");
+
+            Console.ReadLine();
+        
+        }
+    }
+}
+
+
+2
+
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace Codeprogmon
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            string n = Console.ReadLine();
+            int i;
+            ulong num= Convert.ToUInt64(n);
+            if(num>=1&&num<=999999999)
+            {
+                
+            for (i = 0; i < n.Length; ++i)
+            {
+            
+            int d=(int)(n[i])-48;
+            switch (d)
+            {
+                case 0:
+                    Console.WriteLine("zero");
+                    break;
+                case 1:
+                    Console.WriteLine("one");
+                    break;
+                case 2:
+                    Console.WriteLine("two");
+                    break;
+                case 3:
+                    Console.WriteLine("three");
+                    break;
+                case 4:
+                    Console.WriteLine("four");
+                    break;
+                case 5:
+                    Console.WriteLine("five");
+                    break;
+                case 6:
+                    Console.WriteLine("six");
+                    break;
+                case 7:
+                    Console.WriteLine("seven");
+                    break;
+                case 8:
+                    Console.WriteLine("eight");
+                    break;
+                case 9:
+                    Console.WriteLine("nine");
+                    break;
+                 }
+
+                                  
+            }
+                            }
+
+
+            Console.ReadLine();
+        
+        }
+    }
+}
+
+Page of 
+Pythagorean Triples 
+
+
+
+Pythagorean Triples 
+
+
+
+
+A Pythagorean Triple is a sequence of 3 integers a, b, and c, satisfying the following properties: 
+
+1. 0 <a< b<c;and 
+
+ 
+
+
+2. a^2 + b^2 = c^2
+
+
+
+
+
+Write a program that takes 3 integers as input and reports whether they form a Pythagorean Triple. 
+
+
+
+
+Input Format:
+
+Input consists of 3 integers. The first integer corresponds to a, the secong integer corresponds to b and the third integer corresponds to c.
+
+
+
+
+Output Format:
+
+Output consists of a single string --- “yes” if the 3 integers form a Pythogorean triple and “no” otherwise.
+
+
+
+
+ 
+
+
+Sample Input 1:
+
+
+3 
+
+4 
+
+5 
+
+
+
+
+ 
+
+
+Sample Output 1:
+
+
+ 
+
+
+yes
+
+
+
+
+
+ 
+
+
+Sample Input 2:
+
+
+-3 
+
+4 
+
+5 
+
+
+
+
+ 
+
+
+Sample Output 2:
+
+
+ 
+
+
+no
+
+
+
+
+
+Sample Input 3: 
+
+4 
+
+3 
+
+5 
+
+
+
+
+ 
+
+
+Sample Output 3:
+
+
+ 
+
+
+no
+
+
+
+
+2
+
+Page of 
+Number Spelling
+
+
+
+Number Spelling 
+
+Write a program that reads an integer n, 1 = n = 999,999,999, and prints each of its digits, from left to right, as an English word. Your input must be a single number. 
+
+Input Format:
+
+Input consists of a single number.
+
+
+
+
+Output Format:
+
+Refer sample input and output for formatting specifications.
+
+
+
+
+Sample Input 1:
+
+123456789 
+
+
+
+
+Sample Output 1:
+
+one 
+
+two 
+
+three 
+
+four 
+
+five 
+
+six 
+
+seven 
+
+eight 
+
+nine 
+
+
+
+
+Sample Input 2:
+
+10 
+
+
+
+
+Sample Output 2:
+
+one 
+
+zero 
+
+
+
+3
+
+Page of 
+Spikes Detection
+
+
+Spike Detection
+
+ 
+
+Write a program to find the number of spikes, the origination of a spike and its span in a dc signal sample.
+
+ 
+
+A spike in this case is assumed to be a segment where the signal increases to a point and then decreases (or vice versa). The point from where it starts increasing and decreasing (or vice versa) and back to the stable point is said to be the span of spike.
+
+Example :
+
+ 
+
+50 50 50 50 50 60 70 80 70 60 50 50 50 50 50 50
+
+In the above sequence, there is 1 spike, the spike starts at 5 and the span is 7.
+
+ 
+
+Input and Output Format:
+
+ 
+
+Input consists of n+1 integers.
+
+ 
+
+The 1st integer corresponds to n, the number of signal sample values.
+
+The next n integers correspond to the signal sample values in order.
+
+ 
+
+Output consists of the number of spikes and the origin and span of each spike.
+
+If there are multiple spikes, print the spike details in the order in which they appear in the signal.
+
+Refer sample output for formatting specifications.
+
+ 
+
+Sample Input 1:
+
+16
+
+50
+
+50
+
+50
+
+50
+
+50
+
+60
+
+70
+
+80
+
+70
+
+60
+
+50
+
+50
+
+50
+
+50
+
+50
+
+50
+
+ 
+
+Sample Output 1:
+
+1
+
+5 7
+ 
+
+ 
+
+Sample Input 2:
+
+1          
+1 
+2 
+3 
+4 
+5 
+4 
+3 
+2 
+1 
+1 
+0 
+-1 
+-2 
+-3 
+-1 
+1 
+1 
+1 
+1
+
+ 
+
+ 
+
+Sample Output 2:
+2
+2 9
+11 7
+ 
+
+
+
+3
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+ 
+namespace ConsoleApplication13
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n = Convert.ToInt32(Console.ReadLine());
+            int[] a = new int[n];
+            int[,] spike = new int[100,2];
+            for (int i = 0; i < n; i++)
+            {
+                a[i] = Convert.ToInt32(Console.ReadLine());
+            }
+            int count = 0;
+            int stable=a[0];
+            for (int i = 0; i < n; i++)
+            {
+                if (a[i] != stable)
+                {
+                    count++;
+                    int dur=0;
+                    int j = i;
+                    spike[count - 1,0] = j;
+                    while (a[j] != stable)
+                    {
+                        dur++;
+                        j++;
+                    }
+                    spike[count - 1, 1] = dur + 2;
+                    i = j-1;
+                    
+                }
+ 
+            }
+            Console.WriteLine(count);
+            for (int i = 0; i < count; i++)
+            {
+                Console.WriteLine("{0} {1}", spike[i, 0], spike[i, 1]);
+            }
+                    Console.ReadKey();
+        }
+    }
+}
+ 

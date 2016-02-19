@@ -1,0 +1,2734 @@
+happy birthday to cognizant
+
+collection
+1
+ class Employee
+    {
+        public string firstname, lastname, mobile, email, address;
+        public void set()
+        {
+            Console.WriteLine("Enter the Firstname");
+            firstname = Console.ReadLine();
+            Console.WriteLine("Enter the Lastname");
+            lastname = Console.ReadLine();
+            Console.WriteLine("Enter the Mobile");
+            mobile = Console.ReadLine();
+            Console.WriteLine("Enter the Email");
+            email = Console.ReadLine();
+            Console.WriteLine("Enter the Address");
+            address = Console.ReadLine();
+
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int n, i;
+            Console.WriteLine("Enter The Number of Employees");
+            n = int.Parse(Console.ReadLine());
+            Employee[] e = new Employee[100];
+            List<Employee> emp = new List<Employee>();
+            for (i = 0; i < n; i++)
+            {
+                e[i] = new Employee();
+                Console.WriteLine("Enter Employee {0} Details:", i + 1);
+                e[i].set();
+                emp.Add(e[i]);
+            }
+            Console.WriteLine("Employee List:");
+            Console.WriteLine("{0,-15} {1,-15} {2,-15} {3,-30} {4,-15}", "Firstname", "Lastname", "Mobile", "Email", "Address");
+            foreach (Employee a in emp.OrderBy(Employee => Employee.firstname))
+            {
+
+                Console.WriteLine("{0,-15} {1,-15} {2,-15} {3,-30} {4,-15}", a.firstname, a.lastname, a.mobile, a.email, a.address);
+
+
+            }
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+
+
+
+
+
+oops 1
+
+
+1
+
+class Product
+    {
+        private long Id;
+        public long id
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public string ProductName {get; set;}
+        public string SupplierName {get; set;}
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product p = new Product();
+            Console.WriteLine("Enter the product id");
+            p.id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            p.ProductName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            p.SupplierName = Console.ReadLine();
+            Console.WriteLine("Product Id is {0}",p.id);
+            Console.WriteLine("Product Name is {0}",p.ProductName);
+            Console.WriteLine("Supplier Name is {0}",p.SupplierName);
+            Console.ReadLine();
+        }
+    }
+
+
+
+
+
+2
+class Product
+    {
+        private long Id;
+        public long id
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public string ProductName { get; set; }
+        public string SupplierName { get; set; }
+        public Product(long id, string pName, string sName)
+        {
+            this.Id = id;
+            this.ProductName = pName;
+            this.SupplierName = sName;
+        }
+        public Product()
+        {
+            this.Id = 0;
+            this.ProductName = null;
+            this.SupplierName = null;
+        }
+        public void Display()
+        {
+            Console.WriteLine("Product Id is {0}", this.Id);
+            Console.WriteLine("Product Name is {0}", this.ProductName);
+            Console.WriteLine("Supplier Name is {0}", this.SupplierName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long id;
+            string pName, sName;
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            sName = Console.ReadLine();
+            Product p = new Product(id,pName,sName);
+            p.Display();
+            Console.ReadLine();
+        }
+    }
+}
+
+
+3
+
+
+
+
+
+    class Product
+    {
+        private long Id;
+        public long id
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public string ProductName { get; set; }
+        public string SupplierName { get; set; }
+        public Product(long id, string pName, string sName)
+        {
+            this.Id = id;
+            this.ProductName = pName;
+            this.SupplierName = sName;
+        }
+        public Product(long id, string pName)
+        {
+            this.Id = id;
+            this.ProductName = pName;
+            this.SupplierName = "Nivas";
+        }
+        public Product()
+        {
+            this.Id = 0;
+            this.ProductName = null;
+            this.SupplierName = null;
+        }
+        public void Display()
+        {
+            Console.WriteLine("Product Id is {0}", this.Id);
+            Console.WriteLine("Product Name is {0}", this.ProductName);
+            Console.WriteLine("Supplier Name is {0}", this.SupplierName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long id;
+            string pName, sName;
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Is the product supplied by Nivas Suppliers? Type yes or no (not case sensitive)");
+            string choice = Console.ReadLine();
+            if (choice.ToLower() == "yes")
+            {
+                Product p = new Product(id, pName);
+                p.Display();
+            }
+            else
+            {
+                Console.WriteLine("Enter the supplier name");
+                sName = Console.ReadLine();
+                Product p = new Product(id, pName, sName);
+                p.Display();
+            }
+            
+            Console.ReadLine();
+        }
+    }
+}
+
+4
+
+
+  class Product
+    {
+        private long Id;
+        public long id
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public string ProductName { get; set; }
+        public string SupplierName { get; set; }
+        public Product(long id, string pName, string sName)
+        {
+            this.Id = id;
+            this.ProductName = pName;
+            this.SupplierName = sName;
+        }
+        public Product()
+        {
+            this.Id = 0;
+            this.ProductName = null;
+            this.SupplierName = null;
+        }
+        public bool Equals(Product p)
+        {
+            // If parameter is null return false:
+            if ((object)p == null)
+            {
+                return false;
+            }
+
+            // Return true if the fields match:
+            return (Id == p.Id) && (ProductName == p.ProductName) && (SupplierName == p.SupplierName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long id;
+            string pName, sName;
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            sName = Console.ReadLine();
+            Console.WriteLine("Product Id is {0}",id);
+            Console.WriteLine("Product Name is {0}",pName);
+            Console.WriteLine("Supplier Name is {0}",sName);
+            Product product1 = new Product(id, pName, sName);
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            sName = Console.ReadLine();
+            Console.WriteLine("Product Id is {0}", id);
+            Console.WriteLine("Product Name is {0}", pName);
+            Console.WriteLine("Supplier Name is {0}", sName);
+            Product product2 = new Product(id, pName, sName);
+            if (product1.Equals(product2))
+            {
+                Console.WriteLine("The two products are the same");         
+            }
+            else
+            {
+                Console.WriteLine("The two products are different");
+            }
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+5
+
+
+ class Product
+    {
+        private long Id;
+        public long id
+        {
+            get
+            {
+                return this.Id;
+            }
+            set
+            {
+                Id = value;
+            }
+        }
+        public string ProductName { get; set; }
+        public string SupplierName { get; set; }
+        public Product(long id, string pName, string sName)
+        {
+            this.Id = id;
+            this.ProductName = pName;
+            this.SupplierName = sName;
+        }
+        public Product()
+        {
+            this.Id = 0;
+            this.ProductName = null;
+            this.SupplierName = null;
+        }
+        public void Display()
+        {
+            Console.WriteLine("Product Id is {0}", this.Id);
+            Console.WriteLine("Product Name is {0}", this.ProductName);
+            Console.WriteLine("Supplier Name is {0}", this.SupplierName);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            long id;
+            string pName, sName;
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            sName = Console.ReadLine();
+            Product product1 = new Product(id, pName, sName);
+            product1.Display();
+
+            // object 2
+            Console.WriteLine("Enter the product id");
+            id = Convert.ToInt64(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            sName = Console.ReadLine();
+            Product product2 = new Product(id, pName, sName);
+            product2.Display();
+
+            Product product3;
+            product3 = product2;
+
+            if (product3.Equals(product1))
+            {
+                Console.WriteLine("The two products are the same");
+            }
+            else
+            {
+                Console.WriteLine("The two products are different");
+            }
+            if (product3.Equals(product2))
+            {
+                Console.WriteLine("The two products are the same");
+            }
+            else
+            {
+                Console.WriteLine("The two products are different");
+            }
+            Console.ReadLine();
+            
+        }
+    }
+}
+
+
+
+
+
+6
+
+ class Product
+    {
+       public  long id;
+        public string sname, pname;
+        public Product()
+        {
+            
+        }
+        public Product(long id,string pname,string sname)
+        {
+            this.id = id;
+            this.sname = sname;
+            this.pname = pname;
+        }
+        public void get()
+        {
+            Console.WriteLine("Enter the product id");
+            id = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+             pname = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+             sname = Console.ReadLine();
+        
+        }
+        public void display()
+        {
+            Console.WriteLine("Product Id is {0}",id);
+            Console.WriteLine("Product Name is {0}",pname);
+            Console.WriteLine("Supplier Name is {0}",sname);
+        }
+    }
+ 
+    class Program
+    {
+ 
+        static void Main(string[] args)
+        {
+            Product pro1, pro2;
+            
+            pro1 = new Product();
+            pro1.get();
+            pro1.display();
+            pro2 = new Product();
+            pro2.get();
+            pro2.display();
+            if (pro1.pname == pro2.pname && pro1.id == pro2.id && pro1.sname == pro2.sname)
+                Console.WriteLine("The two products are the same");
+            else
+                Console.WriteLine("The two products are different");
+            Console.ReadKey();
+            
+        }
+ 
+    }
+}public class Product
+    {
+        public long Id;
+        public string ProductName;
+        public string SupplierName;
+
+
+        public void getdata()
+        {
+            Console.WriteLine("Enter the product id");
+            Id = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            ProductName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            SupplierName = Console.ReadLine();
+
+        }
+        public void display()
+        {
+            Console.WriteLine("{0} : {1} : {2}", Id, ProductName, SupplierName);
+
+        }
+
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product p = new Product();
+            /*   p.id = 1;
+               p.proname = "Printer";
+               p.supname = "HP";*/
+            p.getdata();
+            p.display();
+            // Console.WriteLine("{0}",p);
+            Console.WriteLine("Invoking GetType() method : {0}", p.GetType());
+            Console.ReadLine();
+        }
+    }
+//}
+
+
+
+7
+
+
+class StaticIllustration
+    {
+        int I1;
+        static int I2;
+
+        public static void getI2()
+        {
+            Console.WriteLine("Enter I2");
+            I2 = Convert.ToInt32(Console.ReadLine());
+        }
+        public void getI1()
+        {
+            Console.WriteLine("Enter I1");
+            this.I1 = Convert.ToInt32(Console.ReadLine());
+        }
+        public override string ToString()
+        {
+            return "I1 = " + this.I1 + "," + "I2 = " + I2;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Object 1 details");
+            StaticIllustration s1 = new StaticIllustration();
+            s1.getI1();
+            StaticIllustration.getI2();
+            Console.Write("Object 1 Details : ");
+            Console.WriteLine(s1.ToString());
+            Console.WriteLine("Enter Object 2 details");
+            StaticIllustration s2 = new StaticIllustration();
+            s2.getI1();
+            StaticIllustration.getI2();
+            Console.Write("Object 2 Details : ");
+            Console.WriteLine(s2.ToString());
+            Console.Write("Object 1 Details : ");
+            Console.WriteLine(s1.ToString());
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+8
+
+
+
+class Grade
+       {
+           public int i1;
+           public static int i2 = 0;
+           public void display()
+           {
+               Console.WriteLine("The value of a is {0}", i1);
+               Console.WriteLine("The number of objects created is {0}", i2);
+           }
+           public Grade()
+           {
+               i2 += 1;
+           }
+           public Grade(int a)
+           {
+               this.i1 = a;
+               i2 += 1;
+           }
+       }
+       class Address
+    {
+           static void Main(string[] args)
+           {
+               string yes=null;
+               int name,i=1;
+               Grade[] obj = new Grade[100];
+              
+                   do
+                   {
+                       Console.WriteLine("Enter Object {0} \"a\" value", i);
+                       name = int.Parse(Console.ReadLine());
+                       obj[i] = new Grade(name);
+                       Console.WriteLine("Object {0} details", i);
+                       obj[i].display();
+                       Console.WriteLine("Do you want to create another object? Type yes or no (not case sensitive)");
+                       yes = Console.ReadLine();
+                       i++;
+                   } while (yes == "YES" || yes == "yes" || yes == "Yes");
+                   Console.WriteLine("The number of objects created so far is {0}",Grade.i2);
+                  Console.ReadKey();
+                   
+               }
+               
+               
+           }
+        
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+oops 2
+
+
+
+1
+ class Product
+    {
+        public long id{get; set;}
+        public string productName { get; set; }
+        public string supplierName { get; set; }
+        public int price { get; set; }
+
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.productName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.supplierName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+    class ProductBO
+    {
+        public void ProductDetails(Product product)
+        {
+            // display the product details
+            Console.WriteLine("Product Id is {0}",product.id);
+            Console.WriteLine("Product Name is {0}", product.productName);
+            Console.WriteLine("Supplier Name is {0}", product.supplierName);
+            Console.WriteLine("Product price is {0}", product.price);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product prod = new Product();
+            ProductBO prod_display = new ProductBO();
+            prod_display.ProductDetails(prod);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+2
+
+
+
+
+class Product
+    {
+        public long id { get; set; }
+        public string productName { get; set; }
+        public string supplierName { get; set; }
+        public int price { get; set; }
+
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.productName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.supplierName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+    }
+    class ProductBO
+    {
+        public void displayProductDetails(Product product)
+        {
+            // display the product details
+            Console.WriteLine("Product Id is {0}", product.id);
+            Console.WriteLine("Product Name is {0}", product.productName);
+            Console.WriteLine("Supplier Name is {0}", product.supplierName);
+            Console.WriteLine("Product price is {0}", product.price);
+        }
+        public void updateProductName(Product product, string pName)
+        {
+            product.productName = pName;
+        }
+        public void updateSupplierName(Product product, string sName)
+        {
+            product.supplierName = sName;
+        }
+        public void updateProductName(Product product, int p)
+        {
+            product.price = p;
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product prod = new Product();
+            ProductBO prod_update = new ProductBO();
+            prod_update.displayProductDetails(prod);
+            Console.WriteLine("Update Menu :");
+            Console.WriteLine("1) Update product name");
+            Console.WriteLine("2) Update supplier name");
+            Console.WriteLine("3) Update product price");
+            Console.WriteLine("Enter Choice");
+            int choice = Convert.ToInt32(Console.ReadLine());
+            switch (choice)
+            {
+                case 1:
+                    Console.WriteLine("Enter new product name");
+                    prod_update.updateProductName(prod,Console.ReadLine());
+                    break;
+                case 2:
+                    Console.WriteLine("Enter new supplier name");
+                    prod_update.updateSupplierName(prod, Console.ReadLine());
+                    break;
+                case 3:
+                    Console.WriteLine("Enter new product price");
+                    prod_update.updateProductName(prod, Convert.ToInt32(Console.ReadLine()));
+                    break;
+                default:
+                    break;
+            }
+            prod_update.displayProductDetails(prod);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+3
+
+
+
+ public class Product
+    {
+        public long id;
+        public String productName;
+        public String SupplierName;
+        public int price;
+
+        public void set()
+        {
+            Console.WriteLine("Enter the product id");
+            id = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            productName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            SupplierName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            price = int.Parse(Console.ReadLine());
+        }
+
+    }
+    public class ProductBO : Product
+    {
+
+        public void displayAllProductDetails(Product[] productlist, int count)
+        {
+            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+            for (int i = 0; i < count; i++)
+            {
+
+                Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", productlist[i].id, productlist[i].productName, productlist[i].SupplierName, productlist[i].price);
+            }
+
+        }
+
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product[] p1 = new Product[100];
+            string ch;
+            int i = 0;
+            do
+            {
+                p1[i] = new Product();
+                p1[i].set();
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                ch = (Console.ReadLine()).ToLower();
+                i++;
+            } while (ch.Equals("yes"));
+            ProductBO pb = new ProductBO();
+
+            pb.displayAllProductDetails(p1, i);
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+
+
+4
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ public class Product
+    {
+        public long id;
+        public String productName;
+        public String SupplierName;
+        public int price;
+
+        public void set()
+        {
+            Console.WriteLine("Enter the product id");
+            id = long.Parse(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            productName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            SupplierName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            price = int.Parse(Console.ReadLine());
+        }
+
+    }
+    public class ProductBO : Product
+    {
+
+        public void displayAllProductDetails(Product[] productlist, int count)
+        {
+            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+            for (int i = 0; i < count; i++)
+            {
+
+                Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", productlist[i].id, productlist[i].productName, productlist[i].SupplierName, productlist[i].price);
+            }
+
+        }
+
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Product[] p1 = new Product[100];
+            string ch;
+            int i = 0;
+            do
+            {
+                p1[i] = new Product();
+                p1[i].set();
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                ch = (Console.ReadLine()).ToLower();
+                i++;
+            } while (ch.Equals("yes"));
+            ProductBO pb = new ProductBO();
+
+            pb.displayAllProductDetails(p1, i);
+
+            Console.ReadLine();
+
+        }
+    }
+}
+
+
+
+
+5
+
+ public class Product
+    {
+        private long id;
+        private string pName;
+        private string sName;
+        private int price;
+ 
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.sName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+        public string PName
+        {
+            get { return pName; }
+            set { pName = value; }
+        }
+        public string SName
+        {
+            get { return sName; }
+            set { sName = value; }
+        }
+        public long ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public int Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+    }
+    public class ProductBO
+    {
+        public void searchProductByName(List<Product> productList, string pname)
+        {
+            foreach (var item in productList)
+            {
+                if (item.PName.ToLower().Equals(pname.ToLower()))
+                {
+                    Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+                    Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", item.ID, item.PName, item.SName, item.Price);
+                    return;
+                }
+            }
+            Console.WriteLine("No records found");
+        }
+ 
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> ProductList = new List<Product>();
+            string choice = "Yes";
+            do
+            {
+                ProductList.Add(new Product());
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                choice = Console.ReadLine();
+            } while (choice.ToLower() == "yes");
+            Console.WriteLine("Enter the name of the product to be searched");
+            string product_to_be_search = Console.ReadLine();
+            ProductBO prod = new ProductBO();
+            prod.searchProductByName(ProductList, product_to_be_search);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+
+6
+
+
+
+ public class Product
+    {
+        private long id;
+        private string pName;
+        private string sName;
+        private int price;
+ 
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.sName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+        public string PName
+        {
+            get { return pName; }
+            set { pName = value; }
+        }
+        public string SName
+        {
+            get { return sName; }
+            set { sName = value; }
+        }
+        public long ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public int Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+    }
+    public class ProductBO
+    {
+        public void searchProductByName(List<Product> productList, string pname, string sname)
+        {
+            foreach (var item in productList)
+            {
+                if (item.PName.ToLower().Equals(pname.ToLower()) && item.SName.ToLower().Equals(sname.ToLower()))
+                {
+                    Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+                    Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", item.ID, item.PName, item.SName, item.Price);
+                    return;
+                }
+            }
+            Console.WriteLine("No records found");
+        }
+ 
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> ProductList = new List<Product>();
+            string choice = "Yes";
+            do
+            {
+                ProductList.Add(new Product());
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                choice = Console.ReadLine();
+            } while (choice.ToLower() == "yes");
+            Console.WriteLine("Enter the name of the product to be searched");
+            string product_to_be_search = Console.ReadLine();
+            Console.WriteLine("Enter the name of the supplier to be searched");
+            string supplier_to_be_search = Console.ReadLine();
+            ProductBO prod = new ProductBO();
+            prod.searchProductByName(ProductList, product_to_be_search, supplier_to_be_search);
+            Console.ReadLine();
+        }
+    }
+}
+
+7
+
+
+
+
+
+  public class Product
+    {
+        private long id;
+        private string pName;
+        private string sName;
+        private int price;
+ 
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.sName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+        public string PName
+        {
+            get { return pName; }
+            set { pName = value; }
+        }
+        public string SName
+        {
+            get { return sName; }
+            set { sName = value; }
+        }
+        public long ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public int Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+    }
+    public class ProductBO
+    {
+        public void searchProductByName(List<Product> productList, int pl, int ph)
+        {
+            foreach (var item in productList)
+            {
+                if (item.Price>=pl && item.Price<=ph)
+                {
+                    Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+                    foreach (var item1 in productList)
+                    {
+                        if (item1.Price >= pl && item1.Price <= ph)
+                        {
+                            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", item1.ID, item1.PName, item1.SName, item1.Price);
+                        }
+                    }
+                    return;
+                }
+            }
+            Console.WriteLine("No records found");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> ProductList = new List<Product>();
+            string choice = "Yes";
+            do
+            {
+                ProductList.Add(new Product());
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                choice = Console.ReadLine();
+            } while (choice.ToLower() == "yes");
+            Console.WriteLine("Enter the minimum price range");
+            int pl = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the maximum price range");
+            int ph = Convert.ToInt32(Console.ReadLine());
+            ProductBO prod = new ProductBO();
+            prod.searchProductByName(ProductList,pl,ph);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+
+8
+ public class Product
+    {
+        private long id;
+        private string pName;
+        private string sName;
+        private int price;
+ 
+        public Product()
+        {
+            Console.WriteLine("Enter the product id");
+            this.id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the product name");
+            this.pName = Console.ReadLine();
+            Console.WriteLine("Enter the supplier name");
+            this.sName = Console.ReadLine();
+            Console.WriteLine("Enter the product price");
+            this.price = Convert.ToInt32(Console.ReadLine());
+        }
+        public string PName
+        {
+            get { return pName; }
+            set { pName = value; }
+        }
+        public string SName
+        {
+            get { return sName; }
+            set { sName = value; }
+        }
+        public long ID
+        {
+            get { return id; }
+            set { id = value; }
+        }
+        public int Price
+        {
+            get { return price; }
+            set { price = value; }
+        }
+    }
+    public class ProductBO
+    {
+        public void displayAllProducts(List<Product> productList)
+        {
+            Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", "Id", "ProductName", "SupplierName", "Price");
+            foreach (var item in productList)
+            {
+                Console.WriteLine("{0,-10} {1,-20} {2,-20} {3,-10}", item.ID, item.PName, item.SName, item.Price);
+            }
+        }
+        public void deleteProduct(List<Product> productList, string pname)
+        {
+            // iterate with for
+            for (int i = 0; i < productList.Count;i++)
+            {
+                if (productList[i].PName.ToLower().Equals(pname.ToLower()))
+                {
+                    productList.RemoveAt(i);
+                }
+            }          
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<Product> ProductList = new List<Product>();
+            string choice = "Yes";
+            do
+            {
+                ProductList.Add(new Product());
+                Console.WriteLine("Do you want to enter the details of another product? Enter yes or no (not case sensitive)");
+                choice = Console.ReadLine();
+            } while (choice.ToLower() == "yes");
+            ProductBO prod = new ProductBO();
+            prod.displayAllProducts(ProductList);
+            Console.WriteLine("Enter the name of the product to be deleted");
+            string product_to_be_deleted = Console.ReadLine();
+            prod.deleteProduct(ProductList, product_to_be_deleted);
+            prod.displayAllProducts(ProductList);
+            Console.ReadLine();
+        }
+    }
+}
+
+
+9
+
+
+
+
+static void Main(string[] args)
+           {
+               
+                       Console.WriteLine("Enter the first integer");
+                       int name = int.Parse(Console.ReadLine());
+               int absname = Math.Abs(name);
+                       Console.WriteLine("Enter the second integer");
+                       int name1 = int.Parse(Console.ReadLine());
+               int absname1 = Math.Abs(name1);
+                       Console.WriteLine("Absolute value of {0} is {1}",name,absname);
+                       Console.WriteLine("Absolute value of {0} is {1}", name1, absname1);
+                       if (absname.Equals(absname1))
+                           Console.WriteLine("{0} = {1}", name, name1);
+                       else
+                           Console.WriteLine("{0} != {1}", name, name1);
+                      
+                  
+                  Console.ReadKey();
+                   
+               }
+               
+               
+           }
+        
+   }
+        
+
+10
+
+
+class Address
+    {
+           static void Main(string[] args)
+           {
+ 
+               
+               if (args.Length > 1)
+               {
+                   Console.WriteLine("The number of arguments passed is {0}", args.Length);
+                   Console.WriteLine("The command line arguments passed are");
+                   for (int i = 0; i < args.Length; i++)
+                       Console.WriteLine(args[i]);
+               }
+               else
+                   Console.WriteLine("The number of arguments passed is 0");
+                  
+                  Console.ReadKey();
+                   
+               }
+               
+               
+           }
+        
+   }
+        
+ 11
+ class Address
+    {
+           static void Main(string[] args)
+           {
+ 
+ 
+               if (args.Length != 2)
+               {
+                   Console.WriteLine("Invalid Input");
+               }
+               else
+               {
+                   int sum = int.Parse(args[0])+int.Parse(args[1]);
+                   Console.WriteLine("The sum of {0} and {1} is {2}", args[0], args[1],sum );
+               }  
+                  Console.ReadKey();
+                   
+               }
+               
+               
+           }
+        
+   }
+
+
+
+
+
+oops 3
+
+
+1.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace handsonoops
+{
+    class Address
+    {
+          
+        //public long id;
+
+        public string street,city,district,state;
+ 
+
+       public int doorNumber,pinCode;
+
+ 
+ 
+
+        public void set()
+
+        {
+ 
+
+            Console.WriteLine("Enter door number");
+
+            doorNumber=int.Parse( Console.ReadLine());
+ 
+
+            Console.WriteLine("Enter street name");
+
+            street = (Console.ReadLine());
+ 
+
+          Console.WriteLine("Enter city name");
+
+            city = (Console.ReadLine());
+ 
+
+           Console.WriteLine("Enter district name");
+
+            district = (Console.ReadLine());
+ 
+
+            Console.WriteLine("Enter state name");
+
+            state = (Console.ReadLine());
+ 
+
+            Console.WriteLine("Enter pin code");
+            pinCode =int.Parse(Console.ReadLine());
+
+
+       }
+
+      
+     }
+     
+    class Program
+
+   {
+       
+        static void Main(string[] args)
+ 
+        {        
+            Address[] addr = new Address[100];
+ 
+
+       Console.WriteLine("Enter the number of addresses to be inserted");
+
+            int z = int.Parse(Console.ReadLine()),i,flag=1,flag1=1;
+ 
+
+            for (i=1; i <=z; i++)
+
+            {
+ 
+
+                addr[i] = new Address();
+
+                Console.WriteLine("Enter address {0} details",i);
+ 
+
+               addr[i].set();
+                
+            }
+
+           Console.WriteLine("Enter a state name");
+ 
+
+           string s = Console.ReadLine();
+
+                List<Address> dis = new List<Address>();
+
+                       for (i = 1; i <= z; i++)
+
+            {
+ 
+
+             if (addr[i].state == s)
+
+               {
+ 
+                    flag = 0;
+
+                    dis.Add(addr[i]);
+              }
+
+         }
+
+            if (flag == 0)
+ 
+            {
+                  string temp;
+                 temp = "hello";
+                 Console.WriteLine("List of districts in {0} are", s);
+                 foreach (Address a in dis.OrderBy(Address => Address.district))
+
+                {
+ 
+                  if (temp == a.district)
+                        continue;
+                     else
+                        Console.WriteLine(a.district);
+                     temp = a.district;
+                          }
+             }
+
+            else
+ 
+            {
+                Console.WriteLine("No records found");
+ 
+            }
+                                     
+             Console.WriteLine("Enter a district name");
+
+          string s1 = Console.ReadLine();
+ 
+
+            List<Address> dis1 = new List<Address>();
+
+            for (i = 1; i <= z; i++)
+ 
+
+            {
+
+                if (addr[i].district == s1)
+ 
+                {
+
+                    flag1 = 0;
+ 
+                    dis1.Add(addr[i]);
+
+               }
+ 
+
+          }
+            if (flag1 == 0)
+ 
+
+            {
+
+                string temp1;
+ 
+
+                temp1 = "hello";
+
+                Console.WriteLine("List of cities in {0} are", s1);
+ 
+
+               foreach (Address a1 in dis1.OrderBy(Address => Address.city))
+
+                {
+ 
+
+                    if (temp1 == a1.city)
+
+                        continue;
+ 
+
+                    else
+
+                        Console.WriteLine(a1.city);
+ 
+
+                    temp1 = a1.city;
+                     
+ 
+
+                }
+
+            }
+ 
+
+            else
+            {
+ 
+
+                Console.WriteLine("No records found");
+
+            }
+ 
+                Console.ReadKey();
+
+ 
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+2
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace handsonoops
+{
+    class Address
+    {
+
+       
+            public int doorNumber;
+            public string street;
+            string city;
+            public string district;
+            public string state;
+            public int pinCode;
+            public Address()
+            {
+                Console.WriteLine("Enter address details");
+                Console.WriteLine("Enter door number");
+                this.doorNumber = Convert.ToInt32(Console.ReadLine());
+                Console.WriteLine("Enter street name");
+                this.street = Console.ReadLine();
+                Console.WriteLine("Enter city name");
+                this.city = Console.ReadLine();
+                Console.WriteLine("Enter district name");
+                this.district = Console.ReadLine();
+                Console.WriteLine("Enter state name");
+                this.state = Console.ReadLine();
+                Console.WriteLine("Enter pin code");
+                this.pinCode = Convert.ToInt32(Console.ReadLine());
+
+            }
+
+            public static void statesearch(List<Address> l)
+            {
+                Console.WriteLine("Enter a state name");
+                string st = Console.ReadLine();
+                int flag = 0;
+                foreach (Address a in l)
+                {
+                    if (a.state.Equals(st))
+                    {
+                        flag = 1;
+                    }
+                }
+                if (flag == 0)
+                    Console.WriteLine("No records found");
+                else
+                {
+                    string t = "beg";
+                    Console.WriteLine("List of districts in {0} are", st);
+
+                    foreach (Address a in l.OrderBy(Address => Address.district))
+                    {
+
+
+                        if (a.state.Equals(st) && !a.district.Equals(t))
+                        {
+
+                            Console.WriteLine(a.district);
+                        }
+                        t = a.district;
+
+                    }
+
+                }
+
+            }
+
+            public static void districtsearch(List<Address> l)
+            {
+                Console.WriteLine("Enter a district name");
+                string st = Console.ReadLine();
+                int flag = 0;
+                foreach (Address a in l)
+                {
+                    if (a.district.Equals(st))
+                    {
+                        flag = 1;
+                    }
+                }
+                if (flag == 0)
+                    Console.WriteLine("No records found");
+                else
+                {
+                    string t = "beg";
+                    Console.WriteLine("List of cities in {0} are", st);
+
+                    foreach (Address a in l.OrderBy(Address => Address.city))
+                    {
+
+
+                        if (a.district.Equals(st) && !a.city.Equals(t))
+                        {
+                            Console.WriteLine(a.city);
+                        }
+                        t = a.city;
+                    }
+
+                }
+
+            }
+
+        }
+        class User
+        {
+            string name;
+
+            string mobileNumber;
+
+            string email;
+
+            Address address;
+
+            string creditCardNumber;
+
+            public User()
+            {
+                Console.WriteLine("Enter name");
+                this.name = Console.ReadLine();
+                Console.WriteLine("Enter mobile number");
+                this.mobileNumber = Console.ReadLine();
+                Console.WriteLine("Enter email address");
+                this.email = Console.ReadLine();
+                this.address = new Address();
+                Console.WriteLine("Enter credit card number");
+                this.creditCardNumber = Console.ReadLine();
+
+
+            }
+
+            public static void mobsearch(List<User> alist)
+            {
+                int flag = 0;
+                Console.WriteLine("Enter the mobile number");
+                string m = Console.ReadLine();
+                foreach (User u in alist)
+                {
+                    if (u.mobileNumber.Equals(m))
+                        flag = 1;
+                }
+                if (flag == 0)
+                    Console.WriteLine("No records found");
+                else
+                {
+                    foreach (User u in alist)
+                    {
+                        if (u.mobileNumber.Equals(m))
+                        {
+                            Console.WriteLine("User Details:");
+                            Console.WriteLine("Name : {0}", u.name);
+                            Console.WriteLine("Email : {0}", u.email);
+                            Console.WriteLine("Credit Card Number : {0}", u.creditCardNumber);
+                        }
+                    }
+                }
+
+            }
+            public static void mobsearchReplace(List<User> alist)
+            {
+
+
+                int flag = 0;
+                string email;
+                Console.WriteLine("Enter the mobile number");
+                string m = Console.ReadLine();
+                foreach (User u in alist)
+                {
+                    if (u.mobileNumber.Equals(m))
+                        flag = 1;
+                }
+                if (flag == 0)
+                    Console.WriteLine("No records found");
+                else
+                {
+                    Console.WriteLine("Enter the new email id");
+                    email = Console.ReadLine();
+                    foreach (User u in alist)
+                    {
+                        if (u.mobileNumber.Equals(m))
+                            u.email = email;
+                    }
+
+                }
+            }
+
+            public static void subsearch(List<User> ulist)
+            {
+                int flag = 0;
+                string sub;
+                Console.WriteLine("Enter the substring");
+                sub = Console.ReadLine();
+                foreach (User u in ulist)
+                {
+                    if (u.name.Contains(sub))
+                        flag = 1;
+                }
+                if (flag == 0)
+                    Console.WriteLine("No records found");
+                else
+                {
+                    // string t = "beg";
+                    Console.WriteLine("List of user names that contain the substring {0}", sub);
+                    //check unique if wring
+                    foreach (User u in ulist.OrderBy(User => User.name))
+                    {
+                        if (u.name.Contains(sub))
+                        {
+                            Console.WriteLine(u.name);
+                        }
+
+                    }
+                }
+
+
+
+
+            }
+
+            public static void districtSearch(List<User> ulist)
+            {
+                string dist;
+                int flag = 0;
+                Console.WriteLine("Enter the district name");
+                dist = Console.ReadLine();
+                foreach (User u in ulist)
+                {
+                    if (u.address.district.Equals(dist))
+                    {
+                        flag = 1;
+                    }
+                }
+                if (flag == 0)
+                {
+                    Console.WriteLine("No records found");
+                }
+                else
+                {
+                    Console.WriteLine("List of users from {0}", dist);
+                    foreach (User u in ulist.OrderBy(User => User.name))
+                    {
+                        if (u.address.district.Equals(dist))
+                        {
+                            Console.WriteLine(u.name);
+                        }
+                    }
+                }
+
+            }
+
+
+        }
+
+        class Program
+        {
+            static void Main(string[] args)
+            {
+                Console.WriteLine("Enter the number of user details to be inserted");
+                int n = Convert.ToInt32(Console.ReadLine());
+                List<User> ulist = new List<User>();
+                for (int i = 0; i < n; i++)
+                {
+                    Console.WriteLine("Enter details of user {0}", i + 1);
+                    ulist.Add(new User());
+
+
+                }
+                int ch;
+                //Address obj = new Address();
+                //Address.statesearch(alist);
+                //Address.districtsearch(alist);
+                Console.WriteLine("Menu\n1) Search for user details using mobile number.\n2) Search for user details using mobile number and then change the email id of the above user to new id provided.\n3) List the names of users in which the given string is a substring.\n4) List the names of users from a particular district.\nAny other choice : Exit");
+
+                do
+                {
+
+                    Console.WriteLine("Enter your choice");
+                    ch = Convert.ToInt32(Console.ReadLine());
+                    switch (ch)
+                    {
+                        case 1:
+                            User.mobsearch(ulist);
+                            break;
+                        case 2:
+                            User.mobsearchReplace(ulist);
+                            break;
+                        case 3:
+                            User.subsearch(ulist);
+                            break;
+                        case 4:
+                            User.districtSearch(ulist);
+                            break;
+                        default:
+                            ch = 10;
+                            break;
+                    }
+
+                    if (ch > 4)
+                        break;
+                } while (true);
+                Console.WriteLine("Application Terminated");
+            }
+        }
+    }
+
+
+
+
+
+
+3 class AuthorBO
+    {
+        public void displayAllAuthorDetails(List<Author> authorList)
+        {
+            Console.WriteLine("{0,-20} {1,-20} {2,-20}", "Name", "Email", "Gender");
+            for (int i = 0; i < authorList.Count; i++)
+            {
+                Console.WriteLine("{0,-20} {1,-20} {2,-20}", authorList[i].name, authorList[i].email, authorList[i].gender);
+            }
+        }
+ 
+        public void listAuthorNamesInSortedOrder(List<Author> authorList)
+        {
+            List<string> list = new List<string>();
+            for (int i = 0; i < authorList.Count; i++)
+            {
+ 
+                list.Add(authorList[i].name);
+            }
+            list.Sort();
+ 
+ 
+            for (int i = 0; i < list.Count; i++)
+            {
+ 
+                Console.WriteLine(list[i]);
+            }
+        }
+ 
+        public Author findAuthorByName(List<Author> authorList, String name)
+        {
+            int a = 0;
+            for (int i = 0; i < authorList.Count; i++)
+            {
+ 
+                a = authorList[i].CompareTo(name);
+ 
+                if (a == 1)
+                {
+                    return authorList[i];
+                }
+ 
+            }
+ 
+ 
+ 
+            return null;
+        }
+ 
+    }
+    class Author : IComparable
+    {
+        public string name;
+        public string email;
+        public string gender;
+ 
+        public Author()
+        {
+ 
+        }
+        public int CompareTo(object obj)
+        {
+            string nam = (string)obj;
+            if (nam.Equals(this.name))
+                return 1;
+ 
+            return 0;
+        }
+ 
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Author a1;
+            AuthorBO b1;
+            string dcsn = "YES";
+            List<Author> l = new List<Author>();
+            do
+            {
+                a1 = new Author();
+                Console.WriteLine("Enter the author name");
+                a1.name = Console.ReadLine();
+                Console.WriteLine("Enter the author email id");
+                a1.email = Console.ReadLine();
+                Console.WriteLine("Enter the author's gender");
+                a1.gender = Console.ReadLine();
+                l.Add(a1);
+                Console.WriteLine("Do you want to add the details of another author? Type Yes/No (Not case sensitive)");
+                dcsn = Console.ReadLine();
+            } while (dcsn.ToUpper().Equals("YES"));
+ 
+            b1 = new AuthorBO();
+            b1.displayAllAuthorDetails(l);
+ 
+            Console.WriteLine("Enter the name of the author to be searched");
+            string author = Console.ReadLine();
+            Author au = b1.findAuthorByName(l, author);
+            if (au == null)
+            {4
+                Console.WriteLine("Author not found");
+            }
+            else
+            {
+                Console.WriteLine((au.name + " (" + au.gender + ") contact at " + au.email).ToString());
+            }
+            Console.WriteLine("Alphabetically sorted author names");
+            b1.listAuthorNamesInSortedOrder(l);
+            Console.ReadKey();
+ 
+ 
+ 
+ 
+        }
+    }
+}
+
+
+4
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace handsonoops
+{
+   
+       
+            class Author
+    {
+       public string name; 
+       public string email;
+       public string gender;
+       public Author(string name, string email, string gender)
+       {
+           this.name = name;
+           this.email = email;
+           this.gender = gender;
+
+       }
+
+
+    }
+    class Book
+    {
+        private String name;
+
+        private List<Author> authorList;
+
+        private double price;
+
+        public int qtyInStock = 0; // Default value --- 0
+
+        public Book()
+        {
+        }
+
+        public Book(string name, List<Author> al, double pr, int qty)
+        {
+            this.name = name;
+            this.authorList = al;
+            this.price = pr;
+            this.qtyInStock = qty;
+        }
+
+        public Book(string name, List<Author> al, double pr)
+        {
+            this.qtyInStock = 0;
+        }
+
+        public void display()
+        {
+            Console.WriteLine(name+authorList+price+qtyInStock);
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the book name");
+            string bname = Console.ReadLine();
+            Console.WriteLine("Enter the number of authors");
+            int n=Convert.ToInt32(Console.ReadLine());
+            List<Author> alist = new List<Author>();
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Enter the author name");
+                string aname = Console.ReadLine();
+                Console.WriteLine("Enter the author email id");
+                string aemail = Console.ReadLine();
+                Console.WriteLine("Enter the author\'s gender");
+                string agen = Console.ReadLine();
+                alist.Add(new Author(aname, aemail, agen));
+            }
+            Console.WriteLine("Enter the book price");
+            int bprice = Convert.ToInt32(Console.ReadLine());
+            Book obj=new Book(bname, alist, bprice);
+            Console.WriteLine("Is the book currently available? Type Yes/No (Not case sensitive)");
+            string resp=Console.ReadLine();
+            string author ="";
+            foreach (Author a in alist)
+            {
+                author = author + a.name + " ";
+            }
+            if(resp.Equals("yes",StringComparison.CurrentCultureIgnoreCase))
+            {
+                Console.WriteLine("Enter the number of books available");
+                n=Convert.ToInt32(Console.ReadLine());
+                obj.qtyInStock = n;
+               
+                Console.WriteLine("{0} authored by {1}costs Rs.{2:0.0} : Available",bname,author,bprice);
+            }
+            else
+            {
+                Console.WriteLine("{0} authored by {1}costs Rs.{2:0.0} : Not Available",bname,author,bprice);
+            }
+
+
+
+
+
+        }
+    }
+}
+
+
+
+
+multithreading
+
+1 
+
+
+
+
+
+class Trigo
+    {
+        double a, b, c;
+ 
+        public void computeSin(Object obj)
+        {
+            Double x = (Double)obj;
+ 
+            this.a = Math.Sin((Math.PI * x) / 180.0);
+ 
+ 
+        }
+        public void computeTan(Object obj)
+        {
+            Double y = (Double)obj;
+            this.b = Math.Tan((Math.PI * y) / 180.0);
+        }
+        public void computeCos(Object obj)
+        {
+            double z = (double)obj;
+            this.c = Math.Cos((Math.PI * z) / 180.0);
+        }
+        public void display()
+        {
+ 
+            Console.WriteLine("Sum of sin, cos, tan = {0}", Math.Round((a + b + c), 2));
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Trigo obj1 = new Trigo();
+            Console.WriteLine("Enter the Degree for Sin : ");
+            double x = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the Degree for Cos : ");
+            double y = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the Degree for Tan : ");
+            double z = Convert.ToDouble(Console.ReadLine());
+ 
+ 
+            Thread sinClass = new Thread(obj1.computeSin);
+            Thread tanClass = new Thread(obj1.computeTan);
+            Thread cosClass = new Thread(obj1.computeCos);
+            sinClass.Start(x);
+            cosClass.Start(y);
+            tanClass.Start(z);
+ 
+            sinClass.Join();
+            cosClass.Join();
+            tanClass.Join();
+ 
+            obj1.display();
+ 
+            Console.ReadLine();
+ 
+        }
+    }
+}
+
+
+
+
+2
+
+
+
+
+class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+            dict.Add('a', 0);
+            dict.Add('e', 0);
+            dict.Add('i', 0);
+            dict.Add('o', 0);
+            dict.Add('u', 0);
+ 
+            Console.WriteLine("Enter Number of Counters :");
+            int n = int.Parse(Console.ReadLine());
+            Thread[] t = new Thread[n];
+ 
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Enter text for counter {0} :", i + 1);
+                string str = Console.ReadLine();
+                t[i] = new Thread(() => dict = CounteVowel(dict, str));
+                t[i].Start();
+                t[i].Join();
+            }
+ 
+            Console.WriteLine("Vowels count in given text are :");
+ 
+ 
+            foreach (KeyValuePair<char, int> kv in dict)
+ 
+                Console.Write("{0}:{1} ", kv.Key.ToString(), kv.Value.ToString());
+ 
+ 
+        }
+ 
+        public static Dictionary<char, int> CounteVowel(Dictionary<char, int> d, string st)
+        {
+            char[] ch = st.ToLower().ToCharArray();
+            for (int i = 0; i < ch.Length; i++)
+            {
+                if (d.ContainsKey(ch[i]))
+                {
+                    d[ch[i]] += 1;
+                }
+            }
+            return d;
+        }
+    }
+}
+
+
+
+
+
+3
+
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading;
+using System.Threading.Tasks;
+ 
+namespace CharFreqTH
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Dictionary<char, int> dict = new Dictionary<char, int>();
+ 
+ 
+            Console.WriteLine("Enter Number of Counters :");
+            int n = int.Parse(Console.ReadLine());
+            Thread[] t = new Thread[n];
+ 
+            for (int i = 0; i < n; i++)
+            {
+                Console.WriteLine("Enter text for counter {0} :", i + 1);
+                string str = Console.ReadLine();
+                t[i] = new Thread(() => dict = CounteVowel(dict, str));
+            }
+            for (int i = 0; i < n; i++)
+            {
+                t[i].Start();
+                t[i].Join();
+ 
+                List<char> lst = dict.Keys.ToList();
+                lst.Sort();
+                Console.WriteLine("Counter {0} Result :", i + 1);
+                foreach (char key in lst)
+ 
+                    Console.Write("{0}:{1} ", key, dict[key]);
+                Console.WriteLine();
+ 
+                dict.Clear();
+            }
+ 
+            //Console.WriteLine("Vowels count in given text are :");
+ 
+ 
+ 
+            Console.ReadLine();
+ 
+        }
+ 
+        public static Dictionary<char, int> CounteVowel(Dictionary<char, int> d, string st)
+        {
+ 
+            char[] ch = st.ToCharArray();
+            for (int i = 0; i < ch.Length; i++)
+            {
+                if (d.ContainsKey(ch[i]))
+                {
+                    d[ch[i]] += 1;
+                }
+ 
+                else
+                    d.Add(ch[i], 1);
+            }
+            return d;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+COLLECTIONS
+
+
+
+1
+
+
+2
+
+class Program
+    {
+ 
+        static void Main(string[] args)
+        {
+ 
+            int i;
+            List<string> s = new List<string>();
+            do
+            {
+ 
+                Console.WriteLine("1. Insert");
+                Console.WriteLine("2. Search");
+                Console.WriteLine("3. Delete");
+                Console.WriteLine("4. Display");
+                Console.WriteLine("5. Exit");
+                Console.WriteLine("Enter your choice :");
+                i = int.Parse(Console.ReadLine());
+                switch (i)
+                {
+                    case 1: Console.WriteLine("Enter the item to be inserted:");
+                        s.Add(Console.ReadLine());
+                        Console.WriteLine("Inserted successfully");
+                        break;
+                    case 2: Console.WriteLine("Enter the item to search :");
+                        if (s.Contains(Console.ReadLine()) == true)
+                            Console.WriteLine("Item found in the list.");
+                        else
+ 
+                            Console.WriteLine("Item not found in the list.");
+                        break;
+ 
+                    case 3: Console.WriteLine("Enter the item to delete :");
+                        string d = Console.ReadLine();
+                        if (s.Contains(d) == true)
+                        {
+ 
+                            s.Remove(d);
+                            Console.WriteLine("Deleted successfully");
+                        }
+ 
+                        else
+                            Console.WriteLine("Item does not exist.");
+                        break;
+ 
+                    case 4: Console.WriteLine("The Items in the list are :");
+                        for (int j = 0; j < s.Count; j++)
+ 
+                            Console.WriteLine(s[j]);
+                        break;
+ 
+                    case 5:
+                        break;
+                }
+ 
+            } while (i != 5);
+ 
+        }
+ 
+ 
+    }
+}
+
+
+
+
+
+3
+
+
+
+ class Program
+    {
+        static void Main(string[] args)
+        {
+            char symbol;
+            int number;
+ 
+            Dictionary<char, int> c1 = new Dictionary<char, int>();
+            int n = 0, y = 0;
+            Boolean[] x = new Boolean[4];
+            do
+            {
+ 
+                Console.WriteLine("Enter a card :");
+                symbol = char.Parse(Console.ReadLine());
+                number = int.Parse(Console.ReadLine());
+ 
+ 
+ 
+ 
+                y++;
+                if (symbol == 'a' && x[0] == false)
+                {
+                    n++;
+                    x[0] = true;
+                    c1.Add(symbol, number);
+                }
+ 
+                if (symbol == 'b' && x[1] == false)
+                {
+                    n++;
+                    x[1] = true;
+                    c1.Add(symbol, number);
+                }
+                if (symbol == 'c' && x[2] == false)
+                {
+ 
+                    n++;
+                    x[2] = true;
+                    c1.Add(symbol, number);
+                }
+ 
+                if (symbol == 'd' && x[3] == false)
+                {
+ 
+                    n++;
+                    x[3] = true;
+                    c1.Add(symbol, number);
+                }
+ 
+ 
+            } while (n < 4);
+            Console.WriteLine("Four symbols gathered in {0} cards.", y);
+ 
+            List<char> lst = c1.Keys.ToList();
+            lst.Sort();
+ 
+            Console.WriteLine("Cards in Set are :");
+ 
+            foreach (char key in lst)
+            {
+ 
+ 
+                Console.WriteLine(key + " " + c1[key]);
+            }
+ 
+        }
+ 
+    }
+ 
+}
+
+
+
+4
+
+
+class Program
+{
+ 
+    static void Main(string[] args)
+    {
+ 
+        Box obj;
+ 
+        bool isNotPresent = true;
+ 
+        HashSet<Box> ht = new HashSet<Box>();
+ 
+        Console.WriteLine("Enter the number of Box");
+ 
+        int n = int.Parse(Console.ReadLine());
+ 
+        for (int i = 0; i < n; i++)
+        {
+ 
+            obj = new Box();
+ 
+            Console.WriteLine("Enter the Box {0} details", i + 1);
+ 
+            Console.WriteLine("Enter Length");
+ 
+            obj.Length = double.Parse(Console.ReadLine());
+ 
+            Console.WriteLine("Enter Width");
+ 
+            obj.Width = double.Parse(Console.ReadLine());
+ 
+            Console.WriteLine("Enter Height");
+ 
+            obj.Height = double.Parse(Console.ReadLine());
+ 
+            double v = Math.Round((obj.Length * obj.Height * obj.Width), 2);
+ 
+            obj.Volume = v;
+ 
+            foreach (Box item in ht)
+            {
+ 
+                if (obj.Equals(item))
+                {
+ 
+                    isNotPresent = false;
+ 
+                    break;
+ 
+                }
+ 
+                else
+ 
+                    isNotPresent = true;
+ 
+            }
+ 
+            if (isNotPresent == true)
+ 
+                ht.Add(obj);
+ 
+        }
+ 
+        Box ob2 = new Box();
+ 
+        ob2.display(ht);
+ 
+        Console.Read();
+ 
+    }
+ 
+}
+ 
+class Box
+{
+ 
+ 
+ 
+    private double length;
+ 
+    public double Length
+    {
+ 
+        get { return length; }
+ 
+        set { length = value; }
+ 
+    }
+ 
+ 
+ 
+    private double width;
+ 
+ 
+ 
+    public double Width
+    {
+ 
+        get { return width; }
+ 
+ 
+ 
+        set { width = value; }
+ 
+    }
+ 
+    private double height;
+ 
+    public double Height
+    {
+ 
+ 
+ 
+        get { return height; }
+ 
+        set { height = value; }
+ 
+    }
+ 
+    private double volume;
+ 
+    public double Volume
+    {
+ 
+        get { return volume; }
+ 
+        set { volume = value; }
+ 
+    }
+ 
+    public void display(HashSet<Box> h)
+    {
+ 
+        Console.WriteLine("Unique Boxes in the Set are");
+ 
+        IEnumerable<Box> en = h.OrderBy(hs => hs.Volume);
+ 
+        foreach (var item in en)
+        {
+ 
+            Console.WriteLine("Length ={0:0.0#} Width ={1:0.0#} Height ={2:0.0#} Volume ={3:0.0#}", item.Length, item.Width, item.Height, item.Volume);
+ 
+        }
+ 
+    }
+ 
+    public override bool Equals(object obj)
+    {
+ 
+        Box obj2 = (Box)obj;
+ 
+        if (this.Volume.Equals(obj2.Volume))
+        {
+ 
+            return true;
+ 
+        }
+ 
+        else
+ 
+            return false;
+ 
+    }
+ 
+ 
+ 
+    public override int GetHashCode()
+    {
+ 
+        return base.GetHashCode();
+ 
+    }
+ 
+ 
+ 
+}

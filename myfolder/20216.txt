@@ -1,0 +1,271 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace codechal010216
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            int m = Convert.ToInt32(Console.ReadLine());
+            int n = Convert.ToInt32(Console.ReadLine());
+            int i, j,k,l;
+            string []s=new string[m];
+            for (i = 0; i < m; ++i)
+            {
+                s[i] = Console.ReadLine();
+                 }
+            int f = Convert.ToInt32(Console.ReadLine());
+            if ((m >= 1 && m <= 50) && (n >= 1 && n <= 50) && (f >= 0 && f <= 50))
+            {
+
+                for (i = 0; i < m; ++i)
+                {
+
+                    for (l = 1; l <= f; ++l)
+                    {
+                        for (j = 0; j < n; ++j)
+                        {
+
+                            for (k = 1; k <= f; ++k)
+                            {
+                                Console.Write((s[i])[j]);
+                            }
+                        }
+
+                        Console.WriteLine();
+                    }
+                    
+                }
+
+
+                Console.ReadLine();
+
+            
+            
+            }
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        }
+    }
+}
+Page of 
+Image Enlarger
+
+
+Image Enlarger 
+
+ 
+
+Problem Statement 
+
+Given an image as a 2-D character array or a string [], scale it up by factor. That is, if the original image is M x N, the scaled image should be (M*factor) x (N*factor). Each character in the input should be represented by factor x factor of the same character in the output (see examples).
+
+ 
+
+Constraints 
+
+- Range of M and N will be between 1 and 50 elements, inclusive.
+
+- Each character in image will have ASCII value between 32 and 126, inclusive.
+
+- Factor will be between 0 and 50, inclusive.
+
+- The output will contain at most 7500 characters.
+
+ 
+
+Input and Output Format:
+
+The first line of the input consists of an integer that corresponds to M.
+
+The second line of the input consists of an integer that corresponds to N.
+
+The next M lines of the input corresponds to the image.
+
+The last line of the input consists of an integer that corresponds to the factor.
+
+ 
+
+Output consists of the scaled up image.
+
+Refer sample output for formatting specifications.
+
+ 
+
+Sample Input: 
+
+3
+
+3
+
+abc
+
+def
+
+ghi
+
+3
+
+ 
+
+Sample Output: 
+
+aaabbbccc
+
+aaabbbccc
+
+aaabbbccc
+
+dddeeefff
+
+dddeeefff
+
+dddeeefff
+
+ggghhhiii
+
+ggghhhiii
+
+ggghhhiii
+
+ 
+
+
+
+2Page of 
+Image Enlarger
+
+
+Image Enlarger 
+
+ 
+
+Problem Statement 
+
+Given an image as a 2-D character array or a string [], scale it up by factor. That is, if the original image is M x N, the scaled image should be (M*factor) x (N*factor). Each character in the input should be represented by factor x factor of the same character in the output (see examples).
+
+ 
+
+Constraints 
+
+- Range of M and N will be between 1 and 50 elements, inclusive.
+
+- Each character in image will have ASCII value between 32 and 126, inclusive.
+
+- Factor will be between 0 and 50, inclusive.
+
+- The output will contain at most 7500 characters.
+
+ 
+
+Input and Output Format:
+
+The first line of the input consists of an integer that corresponds to M.
+
+The second line of the input consists of an integer that corresponds to N.
+
+The next M lines of the input corresponds to the image.
+
+The last line of the input consists of an integer that corresponds to the factor.
+
+ 
+
+Output consists of the scaled up image.
+
+Refer sample output for formatting specifications.
+
+ 
+
+Sample Input: 
+
+3
+
+3
+
+abc
+
+def
+
+ghi
+
+3
+
+ 
+
+Sample Output: 
+
+aaabbbccc
+
+aaabbbccc
+
+aaabbbccc
+
+dddeeefff
+
+dddeeefff
+
+dddeeefff
+
+ggghhhiii
+
+ggghhhiii
+
+ggghhhiii
+
+ Sherlock Holmes suspects his archenemy, Professor Moriarty, is once again plotting something diabolical. Sherlock's companion, Dr. Watson, suggests Moriarty may be responsible for MI6's recent issues with their supercomputer, The Beast.
+
+Shortly after resolving to investigate, Sherlock receives a note from Moriarty boasting about infecting The Beast with a virus; however, he also gives him a clue—a number, N. Sherlock determines the key to removing the virus is to find the largest Decent Number having N digits.
+
+A Decent Number has the following properties:
+
+Its digits can only be 3's and/or 5's.
+The number of 3's it contains is divisible by 5.
+The number of 5's it contains is divisible by 3.
+If there are more than one such number, we pick the largest one.
+Moriarty's virus shows a clock counting down to The Beast's destruction, and time is running out fast. Your task is to help Sherlock find the key before The Beast is destroyed!
+
+Constraints
+1=T=20
+1=N=100000
+
+
+Input Format
+
+The first line is an integer, T, denoting the number of test cases.
+
+The T subsequent lines each contain an integer, N, detailing the number of digits in the number.
+
+Output Format
+
+Print the largest Decent Number having N digits; if no such number exists, tell Sherlock by printing -1.
+
+Sample Input
+
+4
+1
+3
+5
+11
+Sample Output
+
+-1
+555
+33333
+55555533333
+Explanation
+
+For N=1, there is no decent number having 1 digit (so we print -1).
+For N=3, 555 is the only possible number.
+For N=5, 33333 is the only possible number.
+For N=11, 55555533333 and all permutations of these digits are valid numbers; among them, the given number is the largest one.

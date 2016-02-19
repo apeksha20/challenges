@@ -1,0 +1,213 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace codechal090216
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            string s = Console.ReadLine();
+            int len = s.Length;
+            string s1 = "";
+            string s2 = "";
+            int i;
+           int flag=0;
+           
+            for (i = 0; i < len; ++i)
+            {
+                if (s[i] >= 97 && s[i] <= 122)
+                {
+
+                    if (i < len / 2)
+                        s1 = s1 + s[i];
+                    else
+                        s2 = s2 + s[i]; 
+                                               
+                }
+
+                else  
+                {
+                
+                    flag = 2;
+                    
+                }
+                
+           
+            
+            }
+            if(flag==2)
+                Console.WriteLine("Invalid Input");
+            else if(s1.Equals(s2))
+                Console.WriteLine("Pair String");
+            else
+                Console.WriteLine("Not A Pair String");
+            Console.ReadLine();
+        
+        
+        }
+    }
+}
+Page of 
+Mahirl and Pair Strings
+
+
+Mahirl and Pair Strings
+
+ 
+
+Mahirl is very fond of Pair Strings. Mahirl calls a string S a Pair String if the string S is not empty and can be broken into two strings S1 and S2 such that S1 + S2 = S and S1 = S2.
+
+ 
+
+Examples of pair strings are lala, didi, booboo ...
+
+ 
+
+Write a program to find whether a given string is a Pair String or not.
+
+ 
+
+Input and Output Format :
+
+ 
+
+Input consists of a single string.
+
+ 
+
+If the string consists of any character other than the lower case letters , print “Invalid Input”
+
+If the string is a pair string, print “Pair String”.
+
+If the string is not a pair string, print “Not A Pair String”
+
+ 
+
+Sample Input 1:
+
+didi
+
+ 
+
+Sample Output 1:
+
+Pair String
+
+ 
+
+Sample Input 2:
+
+ludo
+
+ 
+
+Sample Output 2:
+
+Not A Pair String
+
+ 
+
+Sample Input 3:
+
+Punitha&
+
+ 
+
+Sample Output 3:
+
+Invalid Input
+
+
+Page of 
+Mahirl and Acronyms
+
+
+Mahirl and Acronyms
+
+ 
+
+Mahirl was learning about acronyms.
+
+An acronym is a word formed from the first letter or first few letters of each word in a phrase (such as sonar, created from sound navigation and ranging).
+
+ 
+
+She was a bit confused with this example and initially she thought of focussing only on acronyms formed using the following rule :
+
+Changing a sentence to acronym means taking first character of each word of the sentence and changing it to upper case then writing the characters separated by "." (dots).
+
+ 
+
+Can you help Mahirl in understanding acronyms?
+
+ 
+
+Write a program to find the acronym of a given sentence.
+
+ 
+
+Input and Output Format:
+
+ 
+
+Input consists of a single string that corresponds to the sentence.
+
+Assume that the maximum length of the string is 500 .
+
+ 
+
+Output consists of a string that corresponds to the acronym of the given input.
+
+ 
+
+Sample Input 1:
+
+North Atlantic Treaty Organization
+
+ 
+
+Sample Output 1:
+
+N.A.T.O.
+
+ 
+
+Sample Input 2:
+
+Evidence based Learning
+
+ 
+
+Sample Output 2:
+
+E.B.L.
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace codechal090216
+{
+    class Program
+    {
+        
+           static void Main(string[] args)
+        {
+ 
+            string s = Console.ReadLine();
+            string[] s1 = s.Split(' ');
+ 
+            for (int i = 0; i < s1.Count(); i++)
+            {
+                Console.Write(s1[i][0].ToString().ToUpper() + ".");
+ 
+            }
+ 
+            Console.ReadLine();
+        }
+    }
+}

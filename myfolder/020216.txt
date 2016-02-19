@@ -1,0 +1,137 @@
+  using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> l = new List<string>();
+            int choice;
+            while (true)
+            {
+                Console.WriteLine("1. Insert");
+                Console.WriteLine("2. Search");
+                Console.WriteLine("3. Delete");
+                Console.WriteLine("4. Display");
+                Console.WriteLine("5. Exit");
+                Console.WriteLine("Enter your choice :");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1: insert(l); break;
+                    case 2: search(l); break;
+                    case 3: delete(l); break;
+                    case 4: display(l); break;
+                    default: break;
+                }
+                if (choice == 5) break;
+            }
+            Console.ReadLine();
+        }
+        public static void insert(List<string> l)
+        {
+            Console.WriteLine("Enter the item to be inserted:");
+            string s = Console.ReadLine();
+            l.Add(s);
+            Console.WriteLine("Inserted successfully");
+        }
+        public static void search(List<string> l)
+        {
+            Console.WriteLine("Enter the item to search :");
+            string s = Console.ReadLine();
+            if (l.Contains(s))
+                Console.WriteLine("Item found in the list.");
+            else
+                Console.WriteLine("Item not found in the list.");
+        }
+        public static void delete(List<string> l)
+        {
+            Console.WriteLine("Enter the item to delete :");
+            string s = Console.ReadLine();
+            int a = 0;
+            if ((a = (l.RemoveAll(z1 => z1 == s))) > 0)
+                Console.WriteLine("Deleted successfully");
+            else
+                Console.WriteLine("Item does not exist.");
+            a++;
+        }
+        public static void display(List<string> l)
+        {
+            Console.WriteLine("The Items in the list are :");
+            foreach (string s in l)
+                Console.WriteLine(s);
+        }
+    }
+}  using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+namespace ConsoleApplication1
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            List<string> l = new List<string>();
+            int choice;
+            while (true)
+            {
+                Console.WriteLine("1. Insert");
+                Console.WriteLine("2. Search");
+                Console.WriteLine("3. Delete");
+                Console.WriteLine("4. Display");
+                Console.WriteLine("5. Exit");
+                Console.WriteLine("Enter your choice :");
+                choice = int.Parse(Console.ReadLine());
+                switch (choice)
+                {
+                    case 1: insert(l); break;
+                    case 2: search(l); break;
+                    case 3: delete(l); break;
+                    case 4: display(l); break;
+                    default: break;
+                }
+                if (choice == 5) break;
+            }
+            Console.ReadLine();
+        }
+        public static void insert(List<string> l)
+        {
+            Console.WriteLine("Enter the item to be inserted:");
+            string s = Console.ReadLine();
+            l.Add(s);
+            Console.WriteLine("Inserted successfully");
+        }
+        public static void search(List<string> l)
+        {
+            Console.WriteLine("Enter the item to search :");
+            string s = Console.ReadLine();
+            if (l.Contains(s))
+                Console.WriteLine("Item found in the list.");
+            else
+                Console.WriteLine("Item not found in the list.");
+        }
+        public static void delete(List<string> l)
+        {
+            Console.WriteLine("Enter the item to delete :");
+            string s = Console.ReadLine();
+            int a = 0;
+            if ((a = (l.RemoveAll(z1 => z1 == s))) > 0)
+                Console.WriteLine("Deleted successfully");
+            else
+                Console.WriteLine("Item does not exist.");
+            a++;
+        }
+        public static void display(List<string> l)
+        {
+            Console.WriteLine("The Items in the list are :");
+            foreach (string s in l)
+                Console.WriteLine(s);
+        }
+    }
+}

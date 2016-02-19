@@ -1,0 +1,32 @@
+F10	Executes the next line of code but does not step into any function calls
+
+Ctrl-Alt-H	Displays the Threads window to view all of the threads for the current process
+
+F9	Sets or removes a breakpoint at the current line
+
+Ctrl-Alt-P	Displays the Processes dialog, which allows you to attach or detach the debugger to one or more running processes
+
+Shift-F11	Executes the remaining lines out from procedure
+
+Ctrl-F5	Runs the code without invoking the debugger
+
+Ctrl-Shift-F10	Sets the execution point to the line of code you choose
+
+Ctrl-F10	Starts or resumes execution of your code and then halts execution when it 
+                 reaches the selected statement.
+Ctrl-Shift-F9	Clears all of the breakpoints in the project
+
+Ctrl-F9	Enables or disables the breakpoint on the current line of code
+
+
+
+
+CTRL + SHIFT + F9
+
+Clears all of the breakpoints in the project.
+
+F5
+Automatically attaches the debugger and runs the application from the startup form specified in the <Project> Properties dialog box. Changes to Continue if in Break mode.
+
+F10	Executes the next line of code but does not step into any function calls
+Shift-F5	Available in break and run modes, this terminates the debugging session

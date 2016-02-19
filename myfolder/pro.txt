@@ -1,0 +1,75 @@
+/* Console.WriteLine("Enter the number of dozens of toys purchased");
+            int n =Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the price per dozen");
+            double p = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the selling price of 1 toy");
+            double sp=Convert.ToDouble(Console.ReadLine());
+            double cp = p *n;
+            double sp1 = 12 * n * sp;
+            double gain = sp1 - cp;
+            double gainpercent = (gain / cp) * 100;
+
+
+            gainpercent.ToString("#.##");
+
+            Console.WriteLine("Sam's profit percentage is {0:0.00} percent", gainpercent);           
+            */
+
+Console.WriteLine("Enter the value of x");
+            double x = Convert.ToDouble(Console.ReadLine());
+           /* double b = 3 / 2 * x;
+            double a = b/3;
+            double work =1/(1 / a + 1 / b);
+           */
+            double diff = x / 2;
+            double a = diff;
+            double b = 3 * diff;
+            double work = 1 / (1 / a + 1 / b);
+            
+            
+            work.ToString("#.##");
+            Console.WriteLine("Working together, A and B can complete the work in {0:0.00} days", Math.Round(work, 2));
+            
+            Console.ReadLine();
+
+
+
+
+ static void Main(string[] args)
+        {
+            Console.WriteLine("Enter the number of overs bowled so far");
+            int over = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the current run rate");
+            double rr = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Enter the target score");
+            int ts = Convert.ToInt32(Console.ReadLine());
+            double rrr=(ts-(over*rr))/(50-over);
+            rrr.ToString("#.##");
+            Console.WriteLine("Required run rate is {0:0.00}",rrr);
+            Console.ReadLine();
+        }
+    }
+
+
+
+           Console.WriteLine("Enter the sides of a triangle");
+           int a = Convert.ToInt32(Console.ReadLine());
+           int b = Convert.ToInt32(Console.ReadLine());
+           int c = Convert.ToInt32(Console.ReadLine());
+           double k = (a + b + c) / 2;
+           double radius = (Math.Sqrt(k*(k - a) * (k - b) * (k - c))) / k;
+           radius.ToString("#.##");
+           Console.WriteLine("The radius of the circle is {0:0.00}",radius);
+           Console.ReadLine();
+                           }
+
+
+
+
+
+ Console.WriteLine("Enter the X and Y coordinate of friend's house");
+            int x = Convert.ToInt32(Console.ReadLine());
+            int y = Convert.ToInt32(Console.ReadLine());
+            double dis = Math.Sqrt(((x - 3)  *(x-3)) + ((y - 4) *(y-4)));
+            Console.WriteLine("Raju needs {0} jumps", Math.Round(dis));
+            Console.ReadLine();
